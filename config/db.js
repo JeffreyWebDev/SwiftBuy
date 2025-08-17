@@ -1,7 +1,7 @@
 
 import mongoose from "mongoose";
 
-const MONGODB_URI = `${process.env.MONGODB_URI}/Core Gadgets E-commerce`;
+const MONGODB_URI = `${process.env.MONGODB_URI}/swiftbuy`;
 
 let cached = global.mongoose || { conn: null, promise: null };
 
