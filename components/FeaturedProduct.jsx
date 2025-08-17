@@ -14,6 +14,7 @@ const products = [
     image: assets.girl_with_earphone_image,
     title: "Stay Connected",
     description: "Compact and stylish earphones for every occasion.",
+    
   },
   {
     id: 3,
