@@ -3,7 +3,7 @@ import connectDB from "./db";
 import User from "@/models/User";
 
 // Create a client to send and receive events
-export const inngest = new Inngest({ id: "SwiftBuy" });
+export const inngest = new Inngest({ id: "swiftbuy-next" });
 
 export const syncUserCreation = inngest.createFunction( 
     { id: "sync-user-from-clerk" },
@@ -20,7 +20,7 @@ export const syncUserCreation = inngest.createFunction(
         const userData = {
             _id : id,
             name: first_name + " " + last_name,
-            email: email_addresses[0]?.email_address,
+            email: email_addresses[0].email_address,
             imageUrl: image_url,
         };
         await connectDB();
@@ -41,8 +41,9 @@ export const syncUserUpdation = inngest.createFunction(
         } = event.data;
 
         const userData = {
+            _id : id,
             name: first_name + " " + last_name,
-            email: email_addresses[0]?.email_address,
+            email: email_addresses[0].email_address,
             imageUrl: image_url,
         };
 
